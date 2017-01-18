@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class CommonDataServiceApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CommonDataServiceApplication.class, args);
 	}
 }
