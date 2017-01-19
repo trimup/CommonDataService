@@ -1,5 +1,6 @@
 package com.cnotes.controller;
 
+import com.cnotes.domain.OrderQueryBean;
 import com.cnotes.repository.OrderQueryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -25,7 +26,6 @@ public class DataController {
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public void insertOrder()
     {
-        orderQueryRepository.findByName()
-
+        orderQueryRepository.insert(new OrderQueryBean());
     }
 }

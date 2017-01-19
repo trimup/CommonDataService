@@ -11,6 +11,6 @@ import java.util.List;
  */
 public interface OrderQueryRepository extends MongoRepository<OrderQueryBean, Long> {
 
-    List<OrderQueryBean> findByName(String name);
+    OrderQueryBean insert(OrderQueryBean queryBean);
 
 }
