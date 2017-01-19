@@ -26,6 +26,16 @@ public class DataController {
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public void insertOrder()
     {
-        orderQueryRepository.insert(new OrderQueryBean());
+        OrderQueryBean orderQueryBean =new OrderQueryBean();
+        orderQueryBean.setId(1);
+        orderQueryBean.setPhone("123");
+        orderQueryRepository.insert(orderQueryBean);
+    }
+
+    @Cacheable
+    @RequestMapping(value = "/findById", method = RequestMethod.POST)
+    public OrderQueryBean findById()
+    {
+        return orderQueryRepository.findByPhone("123");
     }
 }

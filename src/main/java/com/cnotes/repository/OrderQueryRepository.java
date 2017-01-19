@@ -13,4 +13,6 @@ public interface OrderQueryRepository extends MongoRepository<OrderQueryBean, Lo
 
     OrderQueryBean insert(OrderQueryBean queryBean);
 
+    OrderQueryBean findByPhone(String phone);
+
 }
