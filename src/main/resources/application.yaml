@@ -31,8 +31,5 @@ logging:
 
 spring.data.mongodb:
 #      uri: mongodb://120.55.120.173/51qed
-      uri: mongodb://localhost/qed
-      username: qed
-      password: qed
-#      repositories.enabled: true
+      uri: mongodb://192.168.1.232/test
 
